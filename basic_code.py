@@ -10,6 +10,8 @@ list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 a = 0
 
+b = 1000
+
 for i in list:
 
 	x = x + i
@@ -18,6 +20,6 @@ for i in list:
 
 	a = a * i
 	
-
+	b = b / i
 
 	
