@@ -22,10 +22,20 @@ for i in list:
 	
 	b = b / i
 
-print(x)
+if x => 10:
 
-print(y)
+	print(x)
 
-print(a)
+if y < 0:
 
-print(b)	
+	print(y)
+
+if a != 2:
+
+	print(a)
+
+if b == 0:
+
+	print(b)
+
+
