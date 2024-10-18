@@ -34,6 +34,10 @@ if a != 2:
 
 	print(a)
 
+if b == 0:
+
+	print(b)
+
 print(x)
 
 print(y)
