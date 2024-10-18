@@ -38,10 +38,4 @@ if b == 0:
 
 	print(b)
 
-print(x)
 
-print(y)
-
-print(a)
-
-print(b)	
