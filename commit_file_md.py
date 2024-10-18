@@ -55,4 +55,6 @@ while z:
 print('Counted to 5')
 
 
-one = teksts [11:]
+one = teksts[11:]
+
+hell = teksts[:4]
