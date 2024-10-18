@@ -30,6 +30,10 @@ if y < 0:
 
 	print(y)
 
+if a != 2:
+
+	print(a)
+
 print(x)
 
 print(y)
