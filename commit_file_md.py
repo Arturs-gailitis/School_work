@@ -4,6 +4,8 @@ y = 1.1
 
 z = True
 
+z_count = 0
+
 teksts = 'Hello everyone'
 
 list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
