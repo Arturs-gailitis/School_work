@@ -47,3 +47,6 @@ while z:
 	if z_count >= 5:
 
 		z = False
+
+print('Counted to 5')
+
