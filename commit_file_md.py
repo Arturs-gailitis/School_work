@@ -23,7 +23,12 @@ for i in list:
 	b = b / i
 
 if x => 10:
+
 	print(x)
+
+if y < 0:
+
+	print(y)
 
 print(x)
 
