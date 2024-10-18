@@ -60,3 +60,5 @@ one = teksts[11:]
 hell = teksts[:4]
 
 everyone = teksts[6:]
+
+print(one + ' ' + hell + ' for ' + everyone) 
