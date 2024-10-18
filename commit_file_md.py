@@ -42,4 +42,8 @@ if b == 0:
 
 while z:
 
-	count += 1
+	z_count += 1
+
+	if z_count >= 5:
+
+		z = False
