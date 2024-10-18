@@ -22,6 +22,9 @@ for i in list:
 	
 	b = b / i
 
+if x => 10:
+	print(x)
+
 print(x)
 
 print(y)
