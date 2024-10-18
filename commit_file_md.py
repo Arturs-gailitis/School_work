@@ -58,3 +58,5 @@ print('Counted to 5')
 one = teksts[11:]
 
 hell = teksts[:4]
+
+everyone = teksts[6:]
