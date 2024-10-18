@@ -40,4 +40,6 @@ if b == 0:
 
 	print(b)
 
+while z:
 
+	count += 1
