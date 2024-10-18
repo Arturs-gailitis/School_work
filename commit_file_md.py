@@ -40,9 +40,13 @@ if b == 0:
 
 	print(b)
 
+print('Lets count to five')
+
 while z:
 
 	z_count += 1
+
+	print(f'Counted to {z_count}')
 
 	if z_count >= 5:
 
