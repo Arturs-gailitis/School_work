@@ -3,10 +3,10 @@ import mysql.connector
 try:
     # Izveidojiet savienojumu
     connection = mysql.connector.connect(
-        host = 'school'
-        user = 'root'
-        password = ''
-        database = 'otrais_md_datubāze'
+        host="school",
+        user="root",
+        password="",
+        database="otrais_md_datubāze"
     )
     
     # Pārbaudiet, vai savienojums ir veiksmīgs
