@@ -4,7 +4,7 @@ connection = sqlite3.connect('Suņi.db')
 
 cursor = connection.cursor()
 
-cursor.execute("SELECT id, vārds, suga, dzimums, augums FROM suņi")
+cursor.execute("SELECT id, vārds, suga, dzimums, augums, vecums FROM suņi")
 results = cursor.fetchall()
 
 for row in results:
