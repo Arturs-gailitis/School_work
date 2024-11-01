@@ -4,21 +4,25 @@ connection = sqlite3.connect("Suņi.db")
 
 cursor = connection.cursor()
 
-cursor.execute('''
-ALTER TABLE suņi ADD COLUMN vecums INTEGER
-''')
+def Pievienot_kolonnu():
 
-data = [
-    (6,),
-    (10,),
-    (4,)
-]
+    cursor.execute('''
+    ALTER TABLE suņi ADD COLUMN vecums INTEGER
+    ''')
 
-cursor.executemany('''
-UPDATE suņi SET vecums = ? WHERE id = ?
-''', [(age, i + 1) for i, (age,) in enumerate(data)])
+    data = [
+        (6,),
+        (10,),
+        (4,)
+    ]
 
-connection.commit()
+    cursor.executemany('''
+    UPDATE suņi SET vecums = ? WHERE id = ?
+    ''', [(age, i + 1) for i, (age,) in enumerate(data)])
+
+    connection.commit()
+
+Pievienot_kolonnu()
 
 cursor.close()
 connection.close()
