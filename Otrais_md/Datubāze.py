@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS suņi (
 data = [
     ("Reksis", "Vācu_aitas_suns", "V", 65),
     ("Silvestrs", "Dalmācietis", "V", 58),
-    ("Bella", "Vācu_aitas_suns", "V", 60)
+    ("Bella", "Vācu_aitas_suns", "S", 60)
 ]
 
 cursor.executemany('''
