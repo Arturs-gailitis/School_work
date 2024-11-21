@@ -24,8 +24,3 @@ def ielikt_vērtības(column_names, values):
     cursor.execute(query, values)
 
     connection.commit()
-
-
-
-
-

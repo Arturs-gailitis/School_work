@@ -1,5 +1,5 @@
 from Datubāze import datu_bāžu_izveide
-from Datubāžu_vērtības import *
+from Datubāzu_vērtības import *
 
 while True:
     print('1. Izveidot tukšu datubāzi')
