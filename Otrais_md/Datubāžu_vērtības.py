@@ -5,7 +5,7 @@ def iegūt_kolonnas():
     connecting = Savienošana()
     cursor = connecting[1]
 
-    cursor.execute("PRAGMA table_info(suņi)")
+    cursor.execute("PRAGMA table_info(suni)")
 
     columns = [row[1] for row in cursor.fetchall() if row[1] != "ID"]
 
@@ -19,7 +19,7 @@ def ielikt_vērtības(column_names, values):
 
     question_marks = ", ".join(['?'] * len(column_names))
 
-    query = f"INSERT INTO suņi ({", ".join(column_names)}) VALUES ({question_marks})"
+    query = f"INSERT INTO suni ({", ".join(column_names)}) VALUES ({question_marks})"
 
     cursor.execute(query, values)
 
