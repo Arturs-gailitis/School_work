@@ -1,11 +1,29 @@
 from Datubāžu_connect import *
-import sqlite3
 
 def Savienošana():
 
     config = config_load('Ārējs_konfigurācijas_fails.json')
 
-    connection = sqlite3.connect(config)
+    connection = connecting_database(config)
 
-    return connection
+    cursor = connection.cursor()
+
+    return connection, cursor
+
+def datu_bāžu_izveide():
+
+    conecting = Savienošana()
+
+    cursor = conecting[1]
+
+    connection = conecting[0]
+
+    cursor.execute('''CREATE TABLE IF NOT EXISTS suņi (
+                                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                                    Vārds TEXT NOT NULL,
+                                    Suga TEXT NOT NULL,
+                                    Dzimums TEXT CHECK (Dzimums IN ('V', 'S')) NOT NULL,
+                                    Augums REAL CHECK (Augums > 0) NOT NULL )''')
+
+    connection.commit()
 
