@@ -6,6 +6,7 @@ while True:
     print('1. Izveidot tukšu datubāzi')
     print('2. Ievadīt datus tabulā')
     print('3. Skatīties datus no tabulas')
+    print('4. Beigt programmu')
 
     main_options = int(input("Your choice: "))
 
@@ -57,6 +58,12 @@ while True:
         for row in result:
             print(row)
         print("")
+    
+    elif main_options == 4:
+
+        print('Programma izslēdzās....')
+
+        quit()
     
     else:
         print("Nederīga izvēle. Lūdzu izvēlies 1, 2, 3.")
