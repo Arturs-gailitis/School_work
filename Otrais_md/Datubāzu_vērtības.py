@@ -5,7 +5,7 @@ def iegūt_kolonnas():
     connecting = Savienošana()
     cursor = connecting[1]
 
-    cursor.execute("PRAGMA table_info(suņi)")
+    cursor.execute("PRAGMA table_info(suni)")
 
     columns = [row[1] for row in cursor.fetchall() if row[1] != "ID"]
 

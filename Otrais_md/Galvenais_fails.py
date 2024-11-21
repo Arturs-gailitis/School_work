@@ -1,9 +1,12 @@
 from Datubāze import datu_bāžu_izveide
 from Datubāzu_vērtības import *
+from Datubāžu_skatīšana import *
 
 while True:
     print('1. Izveidot tukšu datubāzi')
     print('2. Ievadīt datus tabulā')
+    print('3. Skatīties datus no tabulas')
+    print('4. Beigt programmu')
 
     main_options = int(input("Your choice: "))
 
@@ -24,13 +27,12 @@ while True:
 
                 if value.lower() == 'stop':
                     print("Datu ievade tika pārtraukta.")
-                    break  # Iziet no iekšējā cikla un atgriežas pie galvenās izvēles
+                    break 
 
                 if not value:
-                    value = None  # Ja nav ievades, piešķir None
+                    value = None
                 values.append(value)
 
-            # Ja ievadītās vērtības sakrīt ar kolonnu skaitu, tad ievieto datus
             if len(values) == len(column_names):
                 try:
                     ielikt_vērtības(column_names, values)
@@ -40,7 +42,28 @@ while True:
 
             elif len(values) == 0:
                 print("Datu ievade tika pārtraukta.")
-                break  # Ja nav ievadītas nevienas vērtības, tad arī pārtrauc ievadi
+                break  
 
+    elif main_options == 3:
+        
+        column_names = iegūt_kolonnas()
+        print(f'Pieejamās kolonnas: {", ".join(column_names)}')
+
+        columns_to_select = input("Norādiet kolonnas, kuras vēlaties izvēlēties (atdalītas ar komatiem): ").strip()
+
+        result = Apskatīt_diagrammas(columns_to_select)
+
+        print("")
+        print("Rezultāti:")
+        for row in result:
+            print(row)
+        print("")
+    
+    elif main_options == 4:
+
+        print('Programma izslēdzās....')
+
+        quit()
+    
     else:
-        print("Nederīga izvēle. Lūdzu izvēlies 1 vai 2.")
+        print("Nederīga izvēle. Lūdzu izvēlies 1, 2, 3.")
