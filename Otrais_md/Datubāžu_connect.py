@@ -9,7 +9,7 @@ def config_load(file_path):
 
 def connecting_database(config):
 
-    path = config.get("database_path")
+    path = config.get("database_name")
     connection = sqlite3.connect(path)
 
     return connection
