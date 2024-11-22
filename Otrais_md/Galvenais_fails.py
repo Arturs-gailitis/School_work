@@ -1,12 +1,19 @@
 from Datubāze import datu_bāžu_izveide
 from Datubāzu_vērtības import *
 from Datubāžu_skatīšana import *
+from Datubāžu_mainīšana import *
 
 while True:
+    
+    print()
+
     print('1. Izveidot tukšu datubāzi')
     print('2. Ievadīt datus tabulā')
     print('3. Skatīties datus no tabulas')
-    print('4. Beigt programmu')
+    print('4. Pievienot kolonnu ar vērtībām')
+    print('5. Beigt programmu')
+
+    print()
 
     main_options = int(input("Your choice: "))
 
@@ -60,6 +67,13 @@ while True:
         print("")
     
     elif main_options == 4:
+
+        column_name = input("Ievadi jaunās kolonnas nosaukumu: ")
+        column_type = input("Ievadiet jaunās kolonnas tipu (piemēram INTEGER): ")
+
+        Pievieno_kolonnu_ar_vērtībām(column_name, column_type)
+    
+    elif main_options == 5:
 
         print('Programma izslēdzās....')
 
