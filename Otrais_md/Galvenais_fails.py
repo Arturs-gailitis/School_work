@@ -11,7 +11,7 @@ while True:
     print('2. Ievadīt datus tabulā')
     print('3. Skatīties datus no tabulas')
     print("4. Izveido jaunu kolonnu ar vērtībām")
-    print('4. Beigt programmu')
+    print('5. Beigt programmu')
     print()
 
     main_options = int(input("Your choice: "))
