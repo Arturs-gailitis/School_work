@@ -4,7 +4,6 @@ from Datubāžu_skatīšana import *
 from Datubazu_mainišana import *
 
 while True:
-
     print()
     print("=============Galvenā sadaļa=============")
     print()
@@ -78,4 +77,4 @@ while True:
         quit()
 
     else:
-        print("Nederīga izvēle. Lūdzu izvēlies 1, 2, 3.")
+        print("Nederīga izvēle. Lūdzu izvēlies 1, 2, 3, 4, 5.")
