@@ -1,11 +1,17 @@
 from Datubāze import datu_bāžu_izveide
+
 from Datubāzu_vērtības import *
 from Datubāžu_skatīšana import *
 from Datubazu_mainišana import *
+from Datubāžu_rakstīšana import *
 
 while True:
+
     print()
     print("=============Galvenā sadaļa=============")
+    print()
+
+    print("=============Priekš suni.db=============")
     print()
     print('1. Izveidot tukšu datubāzi')
     print('2. Ievadīt datus tabulā')
@@ -13,6 +19,14 @@ while True:
     print("4. Izveido jaunu kolonnu ar vērtībām")
     print('5. Beigt programmu')
     print()
+    print("========================================")
+
+    print()
+    print("===================Citi=================")
+    print("6. Rakstīt savu querry vai taisīt jaunu datubāzi")
+    print()
+    print("========================================")
+
 
     main_options = int(input("Your choice: "))
 
@@ -75,6 +89,15 @@ while True:
         print('Programma izslēdzās....')
 
         quit()
+    
+    elif main_options == 6:
+
+        while True:
+
+            writing = input("Rakstiet: ")
+
+            if not Rakstīšana(writing):
+                break
 
     else:
-        print("Nederīga izvēle. Lūdzu izvēlies 1, 2, 3, 4, 5.")
+        print("Nederīga izvēle. Lūdzu izvēlies 1, 2, 3, 4, 5, 6.")
