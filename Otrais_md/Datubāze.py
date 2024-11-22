@@ -18,7 +18,7 @@ def datu_bāžu_izveide():
 
     connection = conecting[0]
 
-    cursor.execute('''CREATE TABLE IF NOT EXISTS suņi (
+    cursor.execute('''CREATE TABLE IF NOT EXISTS suni (
                                     id INTEGER PRIMARY KEY AUTOINCREMENT,
                                     Vārds TEXT NOT NULL,
                                     Suga TEXT NOT NULL,
