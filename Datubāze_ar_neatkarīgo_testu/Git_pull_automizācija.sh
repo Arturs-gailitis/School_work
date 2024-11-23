@@ -1,6 +1,6 @@
 #!/bin/bash
 
-REPO_PATH="OneDrive/Desktop/Work/School_work/Datubāze_ar_neatkarīgo_testu"
+REPO_PATH="C:\Users\Arturs\OneDrive\Desktop\Work\School_work\Datubāze_ar_neatkarīgo_testu"
 
 if [ -d "$REPO_PATH" ]; then
 
