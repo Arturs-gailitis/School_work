@@ -9,7 +9,7 @@ if [ -d "$REPO_PATH"]; then
     cd "$REPO_PATH" || { echo "Neizdevās atrast direktoriju."; exit 1; }
 
     echo "Atjaunina repozitoriju..."
-    git pull || {echo "Git pull neizdevās."; exit 1; }
+    git pull || { echo "Git pull neizdevās."; exit 1; }
 
     echo "Izdevās git pull."
 
