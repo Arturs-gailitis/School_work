@@ -25,3 +25,13 @@ def testa_tabula(name, age, profesion):
     worker = cursor.fetchone()
 
     return worker
+
+def izdzēš_testa_tabulu(table_name):
+
+    connections = Savienošana()
+    connection = connections[0]
+    cursor = connections[1]
+
+    cursor.execute(f"DROP TABLE IF EXISTS {table_name};")
+
+    connection.commit()
