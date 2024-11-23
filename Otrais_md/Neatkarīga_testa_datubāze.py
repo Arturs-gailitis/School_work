@@ -1,26 +1,27 @@
 from Datubāze import Savienošana
 
 def testa_tabula(name, age, profesion):
-
+    # Iegūstam savienojumu un kursoru
     connections = Savienošana()
-    cursor = connections[1]
     connection = connections[0]
+    cursor = connections[1]
 
+    # Tabulas izveide
     cursor.execute('''CREATE TABLE IF NOT EXISTS darbinieki (
                    id INTEGER PRIMARY KEY AUTOINCREMENT,
                    Vārds TEXT NOT NULL,
-                   Vecums ID CHECK (Vecums > 18) NOT NULL,
-                   Profesija TEXT NOT NULL );''')
+                   Vecums INTEGER CHECK (Vecums > 18) NOT NULL,
+                   Profesija TEXT NOT NULL);''')
     
-    cursor.execute('''INCERT INTO darbinieki (Vārds, Vecums, Profesija)
-                   VALUES (?,?,?);''', (name, age, profesion))
+    # Ieraksta pievienošana
+    cursor.execute('''INSERT INTO darbinieki (Vārds, Vecums, Profesija)
+                   VALUES (?, ?, ?);''', (name, age, profesion))
     
+    # Saglabā izmaiņas
     connection.commit()
 
-    cursor.execute("SELECT id, Vārds, Vecums, Profesija WHERE Vārds = ?;", (name))
-
+    # Ieraksta iegūšana pēc vārda
+    cursor.execute("SELECT id, Vārds, Vecums, Profesija FROM darbinieki WHERE Vārds = ?;", (name,))
     worker = cursor.fetchone()
 
     return worker
-
-
