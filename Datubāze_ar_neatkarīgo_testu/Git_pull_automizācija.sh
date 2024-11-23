@@ -6,7 +6,7 @@ if [ -d "$REPO_PATH"]; then
 
     echo "Repozitorijs ir atrasts: $REPO_PATH"
 
-    cd "$REPO_PATH" || {echo "Neizdevās atrast direktoriju."; exit 1; }
+    cd "$REPO_PATH" || { echo "Neizdevās atrast direktoriju."; exit 1; }
 
     echo "Atjaunina repozitoriju..."
     git pull || {echo "Git pull neizdevās."; exit 1; }
