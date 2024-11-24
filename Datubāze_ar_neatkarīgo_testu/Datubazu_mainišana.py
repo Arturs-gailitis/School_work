@@ -4,8 +4,11 @@ import sqlite3
 def Pievieno_kolonnu_ar_vērtībām(column_name, column_type):
 
     connections = Savienošana()
+
     cursor = connections[1]
     connection = connections[0]
+
+    # Pievieno jaunu kolonnu tabulai un aizpilda tās vērtības.
 
     try:
 
@@ -17,7 +20,9 @@ def Pievieno_kolonnu_ar_vērtībām(column_name, column_type):
 
         return
     
+    # Atrod rindas ar NULL jaunajā kolonnā
     cursor.execute(f"SELECT rowid FROM suni WHERE {column_name} IS NULL")
+    
     enpty_column = cursor.fetchall()
 
     for row in enpty_column:

@@ -3,9 +3,12 @@ from Neatkarīga_testa_datubāze import *
 from Datubāze import Savienošana
 
 class Neatkarīgs_tests(unittest.TestCase):
+
     def setUp(self):
+
         # Izveido savienojumu un tabulu katram testam
         connections = Savienošana()
+
         self.connection = connections[0]
         self.cursor = connections[1]
 
@@ -31,6 +34,7 @@ class Neatkarīgs_tests(unittest.TestCase):
         result = testa_tabula("Jacob Smith", 23, "janitor")
 
         self.assertIsInstance(result[0], int)  # ID ir vesels skaitlis
+
         self.assertEqual(result[1], "Jacob Smith")
         self.assertEqual(result[2], 23)
         self.assertEqual(result[3], "janitor")
@@ -40,6 +44,7 @@ class Neatkarīgs_tests(unittest.TestCase):
         result = testa_tabula("Marcus Aurelius", 19, "CEO")
 
         self.assertIsInstance(result[0], int)  # ID ir vesels skaitlis
+
         self.assertEqual(result[1], "Marcus Aurelius")
         self.assertEqual(result[2], 19)
         self.assertEqual(result[3], "CEO")
@@ -64,6 +69,7 @@ class Neatkarīgs_tests(unittest.TestCase):
 def sākt_testu():
 
     suite = unittest.TestLoader().loadTestsFromTestCase(Neatkarīgs_tests)
+    
     runner = unittest.TextTestRunner(verbosity=2)
 
     result = runner.run(suite)
