@@ -7,6 +7,7 @@ from Datubāžu_rakstīšana import *
 
 while True:
 
+    # Izvade izvēlņu sarakstam
     print()
     print("=============Galvenā sadaļa=============")
     print()
@@ -27,46 +28,67 @@ while True:
     print()
     print("========================================")
 
-
+    # Lietotāja izvēles ievade
     main_options = int(input("Your choice: "))
 
     if main_options == 1:
+
+        # Tukšas datubāzes izveide
         datu_bāžu_izveide()
 
     elif main_options == 2:
+        
+        # Datu ievadīšana tabulā
         column_names = iegūt_kolonnas()
+
         print(f'Pieejamās kolonnas: {", ".join(column_names)}')
 
         while True:
+
             print("\nIevadiet vērtības katrai kolonnai (rakstiet stop, lai pārtrauktu ievadi):")
 
             values = []
 
+            # Ievada vērtības katrai kolonnai
             for col in column_names:
+
                 value = input(f'{col}:').strip()
 
                 if value.lower() == 'stop':
+
                     print("Datu ievade tika pārtraukta.")
+
                     break 
 
                 if not value:
+
                     value = None
+
                 values.append(value)
 
             if len(values) == len(column_names):
+
                 try:
+
                     ielikt_vērtības(column_names, values)
+
                     print("Dati ir veiksmīgi ievadīti")
+
                 except Exception as e:
+
                     print(f"Kļūda: {e}")
 
             elif len(values) == 0:
+
                 print("Datu ievade tika pārtraukta.")
+
                 break  
 
+    # Datu skatīšana no tabulas
     elif main_options == 3:
 
         column_names = iegūt_kolonnas()
+
         print(f'Pieejamās kolonnas: {", ".join(column_names)}')
 
         columns_to_select = input("Norādiet kolonnas, kuras vēlaties izvēlēties (atdalītas ar komatiem): ").strip()
@@ -75,7 +97,9 @@ while True:
 
         print("")
         print("Rezultāti:")
+
         for row in result:
+
             print(row)
         print("")
 
@@ -83,9 +107,11 @@ while True:
 
         column_name = input("Jaunu kolonnu nosaukums: ")
         column_type = input("Jaunu kolonnu tips (piemēram INTEGER): ")
+
         Pievieno_kolonnu_ar_vērtībām(column_name, column_type)
     
     elif main_options == 5:
+
         print('Programma izslēdzās....')
 
         quit()
@@ -97,6 +123,7 @@ while True:
             writing = input("Rakstiet: ")
 
             if not Rakstīšana(writing):
+                
                 break
 
     else:
