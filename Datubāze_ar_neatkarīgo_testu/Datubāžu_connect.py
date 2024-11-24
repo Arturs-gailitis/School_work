@@ -10,6 +10,8 @@ def config_load(file_path):
 def connecting_database(config):
 
     path = config.get("database_name")
-    connection = sqlite3.connect(path)
+    timeout = config.get("database_timeout") / 1000
+
+    connection = sqlite3.connect(path, timeout)
 
     return connection
