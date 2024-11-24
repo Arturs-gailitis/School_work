@@ -6,6 +6,8 @@ def Apskatīt_diagrammas(columns):
         conecting = Savienošana()
         cursor = conecting[1]
 
+        #Iegūst un atgriež norādīto kolonnu datus no tabulas.
+
         # Pārbauda, vai kolonnas ir norādītas
         if not columns:
             print("Nav norādītas kolonnas!")
