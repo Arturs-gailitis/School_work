@@ -2,11 +2,13 @@ from Datubāžu_connect import *
 
 def Savienošana():
 
-    config = config_load('Ārējs_konfigurācijas_fails.json')
+    # Izveido savienojumu ar datubāzi un atgriež savienojumu un kursoru.
 
-    connection = connecting_database(config)
+    config = config_load('Ārējs_konfigurācijas_fails.json') # Ielādē konfigurāciju
 
-    cursor = connection.cursor()
+    connection = connecting_database(config) # Izveido savienojumu
+
+    cursor = connection.cursor() # Izveido kursonu
 
     return connection, cursor
 
@@ -17,6 +19,8 @@ def datu_bāžu_izveide():
     cursor = conecting[1]
 
     connection = conecting[0]
+
+    # Izveido tabulu 'suni', ja tā nepastāv.
 
     cursor.execute('''CREATE TABLE IF NOT EXISTS suni (
                                     id INTEGER PRIMARY KEY AUTOINCREMENT,
