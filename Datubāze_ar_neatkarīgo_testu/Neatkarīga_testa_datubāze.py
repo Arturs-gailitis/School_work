@@ -3,6 +3,7 @@ from Datubāze import Savienošana
 def testa_tabula(name, age, profesion):
     # Iegūstam savienojumu un kursoru
     connections = Savienošana()
+
     connection = connections[0]
     cursor = connections[1]
 
@@ -22,6 +23,7 @@ def testa_tabula(name, age, profesion):
 
     # Ieraksta iegūšana pēc vārda
     cursor.execute("SELECT id, Vārds, Vecums, Profesija FROM darbinieki WHERE Vārds = ?;", (name,))
+    
     worker = cursor.fetchone()
 
     return worker
@@ -29,6 +31,7 @@ def testa_tabula(name, age, profesion):
 def izdzēš_testa_tabulu(table_name):
 
     connections = Savienošana()
+    
     connection = connections[0]
     cursor = connections[1]
 

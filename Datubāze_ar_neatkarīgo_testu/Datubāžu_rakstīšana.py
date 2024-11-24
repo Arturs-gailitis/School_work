@@ -3,6 +3,7 @@ from Datubāze import Savienošana
 def Rakstīšana(writing):
 
     conections = Savienošana()
+
     connection = conections[0]
     cursor = conections[1]
 
@@ -25,6 +26,7 @@ def Rakstīšana(writing):
             rows = cursor.fetchall()
 
             for row in rows:
+
                 print(row)
 
         else:
@@ -35,6 +37,7 @@ def Rakstīšana(writing):
             print("Komanda veiksmīgi izpildīta.")
             
     except Exception as e:
+        
         print(f"Kļūda: {e}")
 
     return True 

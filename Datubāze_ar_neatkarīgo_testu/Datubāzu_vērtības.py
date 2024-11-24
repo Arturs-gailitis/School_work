@@ -3,6 +3,7 @@ from Datubāze import *
 def iegūt_kolonnas():
 
     connecting = Savienošana()
+
     cursor = connecting[1]
 
     # Iegūst tabulas 'suni' kolonnu nosaukumus, izņemot 'ID'.
@@ -17,6 +18,7 @@ def iegūt_kolonnas():
 def ielikt_vērtības(column_names, values):
 
     conecting = Savienošana()
+    
     cursor = conecting[1]
     connection = conecting[0]
 
