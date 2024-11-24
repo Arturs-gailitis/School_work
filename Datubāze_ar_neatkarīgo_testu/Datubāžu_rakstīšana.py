@@ -6,8 +6,11 @@ def Rakstīšana(writing):
     connection = conections[0]
     cursor = conections[1]
 
+    # Izpilda SQL komandu ar lietotāja ievadi.
+
     try:
         
+        # Pārbauda, vai lietotājs vēlas pārtraukt darbību
         if writing.lower() == "stop":
 
             print("Darbība pārtraukta.")
@@ -16,6 +19,7 @@ def Rakstīšana(writing):
 
         cursor.execute(writing)
         
+        # Apstrādā SELECT komandas, lai parādītu rezultātus
         if writing.strip().lower().startswith("select"):
 
             rows = cursor.fetchall()
@@ -24,7 +28,8 @@ def Rakstīšana(writing):
                 print(row)
 
         else:
-
+            
+            # Veic izmaiņu apstiprināšanu (commit) ne-SELECT komandām
             connection.commit()
             
             print("Komanda veiksmīgi izpildīta.")
