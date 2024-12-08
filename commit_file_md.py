@@ -73,3 +73,5 @@ everyone = teksts[6:]	#Get substring from index 6 to the end
 #Print concatenated result
 
 print(one + ' ' + hell + ' for ' + everyone) 
+
+print("help")
