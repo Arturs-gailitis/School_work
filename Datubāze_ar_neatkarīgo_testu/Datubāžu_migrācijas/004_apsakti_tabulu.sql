@@ -1,0 +1,1 @@
+SELECT id, Vārds, Suga, Dzimums, Augums FROM suni;
