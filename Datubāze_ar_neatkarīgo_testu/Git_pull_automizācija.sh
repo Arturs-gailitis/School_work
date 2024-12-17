@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Definē ceļu uz repozitoriju
-REPO_PATH="C:\Users\Arturs\OneDrive\Desktop\Work\School_work\Datubāze_ar_neatkarīgo_testu"
+REPO_PATH="C:\Users\Arturs\School_work\Datubāze_ar_neatkarīgo_testu"
 
 # Pārbauda, vai direktorija eksistē
 if [ -d "$REPO_PATH" ]; then
