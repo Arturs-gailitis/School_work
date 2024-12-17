@@ -132,7 +132,7 @@ while True:
     
     elif main_options == 7:
 
-        migration_folder = "C:\Users\Arturs\School_work\Datubāze_ar_neatkarīgo_testu\Datubāžu_migrācijas"
+        migration_folder = r"C:\Users\Arturs\School_work\Datubāze_ar_neatkarīgo_testu\Datubāžu_migrācijas"
 
         if os.path.exists(migration_folder):
 
