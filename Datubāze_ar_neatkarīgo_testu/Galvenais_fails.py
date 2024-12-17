@@ -4,6 +4,9 @@ from Datubāzu_vērtības import *
 from Datubāžu_skatīšana import *
 from Datubazu_mainišana import *
 from Datubāžu_rakstīšana import *
+from Migrācijas import *
+
+import os
 
 while True:
 
@@ -25,6 +28,7 @@ while True:
     print()
     print("===================Citi=================")
     print("6. Rakstīt savu querry vai taisīt jaunu datubāzi")
+    print("7. Datubāžu migrācijas")
     print()
     print("========================================")
 
@@ -125,6 +129,19 @@ while True:
             if not Rakstīšana(writing):
                 
                 break
+    
+    elif main_options == 7:
+
+        migration_folder = "C:\Users\Arturs\School_work\Datubāze_ar_neatkarīgo_testu\Datubāžu_migrācijas"
+
+        if os.path.exists(migration_folder):
+
+            Izpildi_migracijas(migration_folder)
+
+        else:
+
+            print(f"Migrācijas mape: {migration_folder} nav atrasta")
+
 
     else:
-        print("Nederīga izvēle. Lūdzu izvēlies 1, 2, 3, 4, 5, 6.")
+        print("Nederīga izvēle. Lūdzu izvēlies 1, 2, 3, 4, 5, 6, 7.")
