@@ -15,7 +15,7 @@ logging.basicConfig(
     format='%(asctime)s - %(levelname)s - %(message)s',  # Formāts
     handlers=[
         logging.StreamHandler(),  # Rāda ziņojumus konsolē
-        logging.FileHandler('program_log.log')  # Saglabā ziņojumus failā
+        logging.FileHandler('žurnalēšana.log')  # Saglabā ziņojumus failā
     ]
 )
 
